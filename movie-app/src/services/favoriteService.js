@@ -1,15 +1,10 @@
-const API = 'http://127.0.0.1:5000/favorites';
-
+const API_URL = `${import.meta.env.VITE_API_URL}/favorites`;
 
 export async function toggleFavorite(movie) {
-
-    const user = JSON.parse(
-        localStorage.getItem('user')
-    );
-
-
+    
+    const user = JSON.parse(localStorage.getItem('user'));
     const response = await fetch(
-        `${API}/toggle`,
+        `${API_URL}/toggle`,
         {
             method: 'POST',
             headers: {
@@ -40,7 +35,7 @@ export async function getFavorites() {
 
 
     const response = await fetch(
-        `${API}/favorites/${user.id}`
+        `${API_URL}/favorites/${user.id}`
     );
 
 
