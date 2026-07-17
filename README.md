@@ -331,6 +331,14 @@ database/
 
 ---
 
+## Demo Account
+
+Username: jointheteam
+
+Email: jointheteam@aglet.co.za
+
+Password: @TeamAglet
+
 ## Component-Based Frontend Design
 
 React components were used because they make the application easier to manage.
