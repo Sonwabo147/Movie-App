@@ -315,6 +315,22 @@ This was chosen because:
 
 ---
 
+## Database Restore
+
+Create a MySQL database:
+
+CREATE DATABASE aglet;
+
+Import the database dump:
+
+mysql -u root -p '' < database/users.sql database/favorites.sql
+
+The dump file is located at:
+
+database/
+
+---
+
 ## Component-Based Frontend Design
 
 React components were used because they make the application easier to manage.
