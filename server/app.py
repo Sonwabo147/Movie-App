@@ -6,7 +6,11 @@ from routes.favorites import favorites
 from services.movies import search_movies
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=[
+    "http://localhost:5173",
+    "http://localhost:3000",
+    "https://movie.vibstar.co.za"
+])
 
 app.register_blueprint(auth)
 app.register_blueprint(api)
