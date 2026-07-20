@@ -40,8 +40,10 @@ def get_popular_movies():
             }
         )
 
-        data = response.json()
+        print("Status:", response.status_code)
+        print("Response:", response.text)
 
+        data = response.json()
         movies.extend(data["results"])
 
 
