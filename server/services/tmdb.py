@@ -1,5 +1,8 @@
 import os
 import requests
+from dotenv import load_dotenv
+
+load_dotenv()
 
 BASE_URL = "https://api.themoviedb.org/3"
 
@@ -39,9 +42,10 @@ def get_popular_movies():
                 "page": page
             }
         )
+        # print("Status:", response.status_code)
+        # print("Response:", response.text.encode("utf-8", errors="ignore").decode("utf-8"))
 
-        print("Status:", response.status_code)
-        print("Response:", response.text)
+        
 
         data = response.json()
         movies.extend(data["results"])

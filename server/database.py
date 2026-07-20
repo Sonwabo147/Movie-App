@@ -1,6 +1,8 @@
 import mysql.connector
 import os
+from dotenv import load_dotenv
 
+load_dotenv()
 
 DB_IP = os.getenv("DB_IP")
 DB_USER = os.getenv("DB_USER")
